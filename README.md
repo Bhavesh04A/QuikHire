@@ -29,6 +29,20 @@
 * **AI Engine:** [Groq SDK](https://groq.com/) running Llama-3-70b
 * **Deployment:** Vercel
 
+📂 Project Structure
+/app
+  /api/ai           # Serverless route for handling AI requests (Groq)
+  /applicants       # Recruiter pipeline dashboard
+  /companies        # Company listings (CMS + Firebase)
+  /components       # Reusable UI components
+     /ai            # AI Widgets (Chatbot, Scorer, JD Writer)
+  /dashboard        # Role-based dashboards
+  /jobs             # Job board and search
+  /profile          # User profile management
+  /lib              # Firebase and Auth configurations
+
+
+
 ## 🚀 Getting Started
 
 Follow these instructions to set up the project locally.
@@ -57,26 +71,4 @@ npm run dev
 
 Open http://localhost:3000 with your browser to see the application.
 
-📂 Project Structure
-/app
-  /api/ai           # Serverless route for handling AI requests (Groq)
-  /applicants       # Recruiter pipeline dashboard
-  /companies        # Company listings (CMS + Firebase)
-  /components       # Reusable UI components
-     /ai            # AI Widgets (Chatbot, Scorer, JD Writer)
-  /dashboard        # Role-based dashboards
-  /jobs             # Job board and search
-  /profile          # User profile management
-  /lib              # Firebase and Auth configurations
 
-Contributions are welcome!
-
-Fork the project.
-
-Create your feature branch (git checkout -b feature/AmazingFeature).
-
-Commit your changes (git commit -m 'Add some AmazingFeature').
-
-Push to the branch (git push origin feature/AmazingFeature).
-
-Open a Pull Request.
