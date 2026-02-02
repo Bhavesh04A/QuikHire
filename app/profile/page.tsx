@@ -7,7 +7,6 @@ import {
   User, Mail, FileText, Briefcase, Save, ShieldCheck, 
   Upload, Loader2, Zap, GraduationCap, PenLine, Sparkles 
 } from 'lucide-react';
-// IMPORT THE AI COMPONENT
 import ResumeEnhancer from '@/app/components/ai/ResumeEnhancer';
 
 export default function SeekerProfile() {
@@ -172,7 +171,7 @@ export default function SeekerProfile() {
                 </div>
                 <button onClick={() => setShowAI(false)} className="text-slate-400 hover:text-white">Close</button>
              </div>
-             <ResumeEnhancer /> {/* The Component I gave you previously */}
+             <ResumeEnhancer />
           </div>
         )}
 

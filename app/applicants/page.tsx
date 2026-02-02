@@ -7,7 +7,6 @@ import {
   CheckCircle, XCircle, Clock, Calendar, Trophy, Filter, FileText, X 
 } from 'lucide-react';
 import Link from 'next/link';
-// Import AI Scorer
 import ApplicantScorer from '@/app/components/ai/ApplicantScorer';
 
 export default function ApplicantsPage() {
@@ -15,7 +14,7 @@ export default function ApplicantsPage() {
   const [filterStatus, setFilterStatus] = useState('pending'); 
   const [loading, setLoading] = useState(true);
   
-  // NEW: State to store the cover letter currently being viewed
+  // State to store the cover letter currently being viewed
   const [selectedLetter, setSelectedLetter] = useState<{name: string, text: string} | null>(null);
 
   useEffect(() => {
@@ -121,7 +120,7 @@ export default function ApplicantsPage() {
                   {/* AI Score Button */}
                   <ApplicantScorer seekerId={app.seekerId} jobTitle={app.jobTitle} />
 
-                  {/* NEW: View Cover Letter Button (Only shows if letter exists) */}
+                  {/* View Cover Letter Button (Only shows if letter exists) */}
                   {app.coverLetter && (
                     <button 
                         onClick={() => setSelectedLetter({ name: app.seekerName, text: app.coverLetter })}
@@ -162,7 +161,7 @@ export default function ApplicantsPage() {
         )}
       </div>
 
-      {/* NEW: Cover Letter Modal */}
+      {/* Cover Letter Modal */}
       {selectedLetter && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
             <div className="bg-white w-full max-w-lg rounded-[2rem] overflow-hidden shadow-2xl">

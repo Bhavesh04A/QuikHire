@@ -25,7 +25,6 @@ export default function HomePage() {
     let unsubscribeApps: any;
 
     async function fetchData() {
-      // Don't fetch if Auth is still initializing
       if (authLoading) return;
 
       try {
@@ -40,7 +39,6 @@ export default function HomePage() {
         const cmsJobs = (Array.isArray(cmsJobsRaw) ? cmsJobsRaw : [])
           .filter((j: any) => j && j.status === 'active');
 
-        // ✅ FIX 1: Explicitly type prev as any
         setData((prev: any) => ({ 
           ...prev, 
           home: homePage, 
@@ -52,7 +50,6 @@ export default function HomePage() {
           const jobSnap = await getDocs(query(collection(db, "jobs"), where("status", "==", "active"), limit(10)));
           const fbJobs = jobSnap.docs.map(d => ({ _id: d.id, ...d.data(), isFirebase: true }));
           
-          // ✅ FIX 2: Explicitly type prev as any
           setData((prev: any) => ({ 
             ...prev, 
             jobs: [...cmsJobs, ...fbJobs] 
@@ -71,7 +68,6 @@ export default function HomePage() {
               }))
               .sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
-            // ✅ FIX 3: Explicitly type prev as any
             setData((prev: any) => ({ ...prev, jobs: myJobs }));
             
             setRecruiterStats(prev => ({
@@ -112,7 +108,7 @@ export default function HomePage() {
     job.companyName?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // CRITICAL FIX: Show loader if Auth OR Content is loading
+  //  Show loader if Auth OR Content is loading
   if (authLoading || contentLoading) return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-white font-bold"><Loader2 className="animate-spin w-8 h-8 text-blue-500 mb-4"/></div>;
 
   // View 1: Recruiter

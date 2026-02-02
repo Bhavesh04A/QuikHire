@@ -4,7 +4,6 @@ import { auth, db } from '@/lib/firebase';
 import { collection, addDoc, query, where, doc, updateDoc, deleteDoc, getDoc, onSnapshot, getDocs } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
-// Added Sparkles for AI button
 import { 
   Building2, PlusCircle, ListChecks, MapPin, Trash2, Power, 
   Users, TrendingUp, Search, CheckCircle, Edit3, Save, Upload, Loader2, Calendar, Sparkles 
@@ -31,7 +30,7 @@ export default function RecruiterDashboard() {
   const [myJobs, setMyJobs] = useState<any[]>([]);
   const [stats, setStats] = useState({ hiredCount: 0, activeJobs: 0 });
   const [loading, setLoading] = useState(true);
-  // NEW: AI Loading State
+  //  AI Loading State
   const [generatingAI, setGeneratingAI] = useState(false);
   
   const router = useRouter();
@@ -74,7 +73,7 @@ export default function RecruiterDashboard() {
     return () => unsubscribe();
   }, []);
 
-  // NEW: AI Generator Function
+  // AI Generator Function
   const handleGenerateDescription = async () => {
     if (!jobData.title || !jobData.location) {
         alert("Please enter a Job Title and Location first so the AI has context!");
@@ -316,7 +315,7 @@ export default function RecruiterDashboard() {
                             onChange={e => setJobData({...jobData, description: e.target.value})} 
                             required 
                         />
-                        {/* NEW AI GENERATE BUTTON */}
+                        {/* AI GENERATE BUTTON */}
                         <button 
                             type="button"
                             onClick={handleGenerateDescription}

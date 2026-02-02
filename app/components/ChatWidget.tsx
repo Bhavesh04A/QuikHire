@@ -11,7 +11,7 @@ export default function ChatWidget() {
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // 1. NEW: Reset History on Logout or Role Switch
+ 
   useEffect(() => {
     if (user) {
         setMessages([
@@ -23,8 +23,8 @@ export default function ChatWidget() {
             }
         ]);
     } else {
-        setMessages([]); // Clear if logged out
-        setIsOpen(false); // Close widget
+        setMessages([]); 
+        setIsOpen(false); 
     }
   }, [user, role]);
 

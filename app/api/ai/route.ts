@@ -59,7 +59,6 @@ export async function POST(req: Request) {
     else if (action === 'job_match') {
         jsonMode = true;
         systemContent = "You are a Recruitment AI. Match the candidate to the best jobs. Output JSON only.";
-        // We limit the job data sent to avoid token limits
         userContent = `
           Candidate Profile: ${data.userProfile}
           

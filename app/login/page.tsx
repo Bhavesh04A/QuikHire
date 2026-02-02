@@ -19,7 +19,6 @@ export default function LoginPage() {
     
     try {
       await signInWithEmailAndPassword(auth, demoEmail || email, demoPass || password);
-      // Auth listener in Layout/Home will handle redirect, but we push just in case
       router.push('/'); 
     } catch (error: any) {
       alert("Invalid login credentials. Please try again.");

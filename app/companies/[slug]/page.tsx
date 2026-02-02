@@ -42,12 +42,9 @@ export default function CompanyDetailPage() {
         let foundJobs: any[] = [];
 
         if (foundComp) {
-          // ✅ FIX: Alias foundComp to a const variable inside the block.
-          // This tells TypeScript: "I promise this variable is not null inside this block."
           const currentComp = foundComp; 
 
           foundJobs = cmsJobs.filter((j: any) => {
-             // Use currentComp instead of foundComp
              const isSameId = j.company?._id && currentComp._id && String(j.company._id) === String(currentComp._id);
              const isSameName = j.company?.name === currentComp.name; 
              

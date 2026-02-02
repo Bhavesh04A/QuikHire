@@ -8,7 +8,6 @@ import { signOut } from "firebase/auth";
 import { useState, useEffect, useRef } from "react";
 import { User, LogOut, ChevronDown, UserCircle, Briefcase } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
-// 1. IMPORT THE CHAT WIDGET
 import ChatWidget from "./components/ChatWidget";
 
 const inter = Inter({ subsets: ["latin"] });

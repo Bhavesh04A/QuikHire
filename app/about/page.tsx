@@ -17,7 +17,6 @@ export default function AboutPage() {
         
         const aboutPage = client.getPage('/about');
 
-        // ✅ FIX: Only run parsing logic if aboutPage exists
         if (aboutPage) {
             // 1. Robust Parsing for Statistics
             if (aboutPage.key_statistics) {

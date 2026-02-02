@@ -34,7 +34,7 @@ export default function PublicProfileView() {
   if (!profile) return <div className="p-32 text-center font-bold text-slate-400">Candidate profile not found.</div>;
 
   return (
-    <div className="max-w-5xl mx-auto py-24 px-6 mb-20 "> {/* Added mb-20 for footer spacing */}
+    <div className="max-w-5xl mx-auto py-24 px-6 mb-20 "> 
       
       {/* Header Card */}
       <div className="card p-10 bg-white shadow-2xl rounded-[3rem] border border-slate-100 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -92,7 +92,6 @@ export default function PublicProfileView() {
         
         {/* Left Column: Bio & Experience */}
         <div className="space-y-8">
-          {/* Removed h-full to fix whitespace issue */}
           <div className="card p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm">
             <h3 className="flex items-center gap-3 font-black text-slate-900 uppercase text-xs tracking-widest mb-6 border-b border-slate-50 pb-4">
               <Zap className="w-4 h-4 text-blue-500" /> Professional Bio

@@ -27,7 +27,6 @@ export default function CompaniesPage() {
         
         const page = client.getPage('/companies');
         
-        // ✅ FIX: Force title to be a string to satisfy TypeScript
         if (page?.title) {
             setCmsTitle(String(page.title));
         }

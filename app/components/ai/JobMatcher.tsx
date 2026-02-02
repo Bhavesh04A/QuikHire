@@ -12,7 +12,7 @@ interface Job {
   title: string;
   companyName?: string;
   company?: { name: string };
-  description?: string; // We need this for context
+  description?: string; 
   isFirebase?: boolean;
 }
 
@@ -41,7 +41,6 @@ export default function JobMatcher({ jobs }: Props) {
         const userProfile = `Bio: ${userData.bio || ''}, Experience: ${userData.experience || ''}, Skills: ${userData.bio || ''}`;
 
         // 2. Prepare Job Data (Minified to save tokens)
-        // We only send ID, Title, Company, and a snippet of description
         const jobsPayload = jobs.slice(0, 15).map(j => ({
             jobId: j._id || j.id,
             title: j.title,

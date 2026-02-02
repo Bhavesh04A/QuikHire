@@ -37,7 +37,6 @@ export default function JobDetailPage() {
             env: 'latest',
           });
           
-          // ✅ FIX: Explicitly cast to any[] so TypeScript knows it is an array
           const cmsJobs = (client.getEntry('jobs') as any[]) || [];
           
           const foundCmsJob = cmsJobs.find((j: any) => j._id === id);

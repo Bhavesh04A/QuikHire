@@ -5,7 +5,6 @@ import { db } from '@/lib/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-// [NEW] Import the AI Job Matcher
 import JobMatcher from '@/app/components/ai/JobMatcher';
 
 export default function JobsPage() {
@@ -95,7 +94,7 @@ export default function JobsPage() {
           />
         </div>
 
-        {/* [NEW] AI SMART MATCH BUTTON */}
+        {/*  AI SMART MATCH BUTTON */}
         <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
            <JobMatcher jobs={allJobs} />
         </div>

@@ -36,7 +36,7 @@ export default function ApplicantScorer({ seekerId, jobTitle }: Props) {
         body: JSON.stringify({
           action: 'score_applicant',
           data: {
-            jobDescription: jobTitle, // Using Title as proxy for full JD for speed
+            jobDescription: jobTitle, 
             resumeText: resumeText
           }
         })

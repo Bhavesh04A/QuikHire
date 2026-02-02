@@ -31,7 +31,6 @@ export default function ContactPage() {
         
         // Set default inquiry type if available
         if (data?.inquiry_types) {
-           // ✅ FIX: Force String() to ensure .split() works
            const types = Array.isArray(data.inquiry_types) 
              ? data.inquiry_types 
              : String(data.inquiry_types).split(',');
@@ -77,7 +76,6 @@ export default function ContactPage() {
     }
     
     // Case 2: It's a comma-separated string
-    // ✅ FIX: Force String() here too for safety
     if (typeof cmsData.inquiry_types === 'string') {
       return cmsData.inquiry_types.split(',').map((s: string) => s.trim());
     }
