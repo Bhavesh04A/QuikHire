@@ -30,6 +30,7 @@
 * **Deployment:** Vercel
 
 📂 Project Structure
+```bash
 /app
   /api/ai           # Serverless route for handling AI requests (Groq)
   /applicants       # Recruiter pipeline dashboard
