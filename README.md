@@ -29,18 +29,6 @@
 * **AI Engine:** [Groq SDK](https://groq.com/) running Llama-3-70b
 * **Deployment:** Vercel
 
-📂 Project Structure
-```bash
-/app
-  /api/ai           # Serverless route for handling AI requests (Groq)
-  /applicants       # Recruiter pipeline dashboard
-  /companies        # Company listings (CMS + Firebase)
-  /components       # Reusable UI components
-     /ai            # AI Widgets (Chatbot, Scorer, JD Writer)
-  /dashboard        # Role-based dashboards
-  /jobs             # Job board and search
-  /profile          # User profile management
-  /lib              # Firebase and Auth configurations
 
 
 
@@ -73,3 +61,15 @@ npm run dev
 Open http://localhost:3000 with your browser to see the application.
 
 
+📂 Project Structure
+```bash
+/app
+  /api/ai           # Serverless route for handling AI requests (Groq)
+  /applicants       # Recruiter pipeline dashboard
+  /companies        # Company listings (CMS + Firebase)
+  /components       # Reusable UI components
+     /ai            # AI Widgets (Chatbot, Scorer, JD Writer)
+  /dashboard        # Role-based dashboards
+  /jobs             # Job board and search
+  /profile          # User profile management
+  /lib              # Firebase and Auth configurations
